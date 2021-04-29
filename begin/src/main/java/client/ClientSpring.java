@@ -1,5 +1,5 @@
 package client;
-import config.ComponentMainConfig;
+import com.example.config.ComponentMainConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import service.Cart;

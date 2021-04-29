@@ -10,7 +10,16 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>begin</module>
+        <module>JavaEE</module>
+        <module>mvc</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.3.6</version>
+        </dependency>
+    </dependencies>
 
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
