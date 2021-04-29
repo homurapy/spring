@@ -9,10 +9,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="begin" />
         <module name="JavaEE" />
+        <module name="mvc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="demo" target="1.8" />
       <module name="JEE" target="15" />
+      <module name="proba" target="15" />
+      <module name="spring1" target="1.8" />
+      <module name="springProductMVC" target="15" />
     </bytecodeTargetLevel>
   </component>
 </project>
