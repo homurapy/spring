@@ -12,6 +12,7 @@
         <module>begin</module>
         <module>JavaEE</module>
         <module>mvc</module>
+        <module>boot</module>
     </modules>
     <dependencies>
         <dependency>
