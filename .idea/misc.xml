@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/JavaEE/pom.xml" />
         <option value="$PROJECT_DIR$/mvc/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/boot/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
