@@ -1,15 +1,20 @@
 package com.vasilev.model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
+import java.util.Set;
 
-@NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 
 @Entity
+@Data
 @Table(name = "products")
 public class Product {
     @Id
@@ -20,7 +25,19 @@ public class Product {
     @Column(name = "title")
     private String title;
 
-    @Column(name = "cost")
-    private Integer cost;
-    }
+    @Column(name = "price")
+    private Integer price;
+
+    public Product(){}
+
+    @ManyToMany
+    @JoinTable(
+            name = "orders",
+            inverseJoinColumns = @JoinColumn (name = "id_buyer"),
+             joinColumns = @JoinColumn(name = "id_product")
+    )
+    private List<Buyer> buyers;
+
+}
+
 

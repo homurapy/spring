@@ -1,6 +1,7 @@
 package com.vasilev.service;
 
 import com.vasilev.dao.ProductDao;
+import com.vasilev.model.Buyer;
 import com.vasilev.model.Product;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -23,5 +24,9 @@ public class ProductService {
 
     public void deleteById(Long id) {
         productDao.delete(productDao.findById(id));
+    }
+
+    public List<Buyer> getBuyerProduct(Long id){
+        return productDao.findById(id).getBuyers();
     }
 }
