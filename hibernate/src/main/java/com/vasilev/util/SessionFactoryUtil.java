@@ -1,5 +1,6 @@
 package com.vasilev.util;
 
+import com.vasilev.model.Buyer;
 import com.vasilev.model.Product;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -15,6 +16,7 @@ public class SessionFactoryUtil {
             try {
                 Configuration configuration = new Configuration().configure();
                 configuration.addAnnotatedClass(Product.class);
+                configuration.addAnnotatedClass(Buyer.class);
                 StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
                 sessionFactory = configuration.buildSessionFactory(builder.build());
                 new Configuration().configure().buildSessionFactory();
