@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1251">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.6.0-1/css/bootstrap.min.css}"/>
+</head>
+<body>
+<script th:src="@{/webjars/bootstrap/4.6.0-1/js/bootstrap.bundle.min.js}"></script>
+<a href="./">Назад</a>
+
+<h1>Состав хранилища</h1>
+<table class="table">
+    <tr><th>ID</th><th>Наименование</th><th>Стоимость</th></tr>
+    <tr th:each=" product: ${products}">
+        <td th:text="${product.id}">...</td>
+        <td th:text="${product.title}">...</td>
+        <td th:text="${product.cost}">...</td>
+    </tr>
+</table>
+</body>
+</html>
+
