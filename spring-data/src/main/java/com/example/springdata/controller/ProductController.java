@@ -12,7 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 
 public class ProductController {
-    private ProductRepo repo;
+    private final ProductRepo repo;
     @PostMapping
     public Product save(@RequestBody Product product){
         return repo.save(product);
@@ -23,20 +23,8 @@ public class ProductController {
         return (List<Product>) repo.findAll();
     }
     @GetMapping("/search")
-    public List <Product> findByName(@RequestParam String name){
-        return repo.findByTitle(name);
-    }
-    @GetMapping("/search")
     public List <Product> findAllGreaterMinPrice(@RequestParam Integer price){
         return repo.findProductsByPriceGreaterThan(price);
-    }
-    @GetMapping("/search")
-    public List <Product> findAllLessMaxPrice(@RequestParam Integer price) {
-        return repo.findProductsByPriceLessThan(price);
-    }
-    @GetMapping("/search")
-    public List <Product> findProductsByPriceBetween(@RequestParam Integer min, Integer max) {
-        return repo.findProductsByPriceBetween(min, max);
     }
     @DeleteMapping
     public  void deleteById(@PathVariable Long id){

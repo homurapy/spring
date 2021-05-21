@@ -1,12 +1,13 @@
 package com.example.springdata.model;
 
-import lombok.*;
-
 import javax.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "products")
 @Data
+@NoArgsConstructor
 
 public class Product {
     @Id
@@ -18,10 +19,7 @@ public class Product {
     private String title;
 
     @Column(name = "price")
-    private Integer price;
-
-    public Product(){}
-
+    private int price;
 }
 
 
