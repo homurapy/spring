@@ -10,15 +10,10 @@ angular.module('app', []).controller('indexController', function ($scope, $http)
             })
 
     };
-    $scope.saveProduct = function () {
-        console.log($scope.NewProduct)
-        $http.post(contextPath + '/product', $scope.NewProduct)
-            .then(function (resp){
-                $scope.NewProduct = null
-                $scope.fillTable();
-            })
-
-    };
+    $scope.deleteProductById = function (id) {
+        let  index = $scope.Products.findIndex(p => p.id === id)
+        if(index !== -1) $scope.Products.splice(index,1);
+            }
 
     $scope.fillTable = function () {
         $http({
