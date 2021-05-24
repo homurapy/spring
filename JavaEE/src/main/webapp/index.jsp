@@ -5,9 +5,9 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "Очень голодный!" %>
+<h1><%= "Ты очень голодный?" %>
 </h1>
 <br/>
-<a href="product">Дайте еды</a>
+<a href="product">Возьми еды</a>
 </body>
 </html>
