@@ -19,6 +19,6 @@ public class MappingUtil {
     }
 
     public static Product dtoToProduct(ProductDto dto, Category category) {
-        return new Product(dto.getId(), dto.getTitle(), dto.getPrice(), category);
+        return new Product(dto.getId(), dto.getTitle(), dto.getPrice(), 1, category);
     }
 }

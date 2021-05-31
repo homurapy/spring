@@ -10,11 +10,17 @@ angular.module('app', []).controller('indexController', function ($scope, $http)
             })
 
     };
+    // $scope.deleteProductById = function (id) {
+    //     let  index = $scope.Products.findIndex(p => p.id === id)
+    //     if(index !== -1) $scope.Products.splice(index,1);
+    //         }
     $scope.deleteProductById = function (id) {
-        let  index = $scope.Products.findIndex(p => p.id === id)
-        if(index !== -1) $scope.Products.splice(index,1);
-            }
-
+        console.log($scope.id)
+        $http.get(contextPath + '/product', $scope.id)
+            .then(function (resp){
+                $scope.fillTable();
+            });
+    };
     $scope.fillTable = function () {
         $http({
             url: contextPath + '/product',

@@ -24,6 +24,10 @@ public class Product {
     @Column(name = "price")
     private Integer price;
 
+    @Version
+    @Column(name = "version")
+    private Integer version;
+
     @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "category_id")
