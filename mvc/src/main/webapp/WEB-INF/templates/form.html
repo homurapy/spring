@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=cp1251">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.6.0-1/css/bootstrap.min.css}"/>
+</head>
+<body>
+<script th:src="@{/webjars/bootstrap/4.6.0-1/js/bootstrap.bundle.min.js}"></script>
+<a href="./storage" class="ui-menu">Состав</a>
+<div class="container">
+        <form action="#" th:action="@{/product}" method="post" th:object="${product}" class="actionForm">
+            <div class="mb-3">
+                <label class="form-label">Продукт</label>
+                <input type="text" class="form-control" id="title" name="title"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Стоимость</label>
+                <input type="text" class="form-control" id="cost" name="cost"/>
+            </div>
+
+            <div class="mb-3">
+                <button type="submit" class="btn-primary">Добавить</button>
+            </div>
+        </form>
+ </div>
+</div>
+</body>
+</html>
